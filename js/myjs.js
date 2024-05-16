@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const username = document.getElementById('register-username').value;
         const password = document.getElementById('register-password').value;
-        
+
         if (username && password) {
             localStorage.setItem('username', username);
             localStorage.setItem('password', password);
