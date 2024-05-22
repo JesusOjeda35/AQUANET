@@ -13,6 +13,7 @@
             <div class="question">
                 <label for="q1">1. ¿Cuándo realiza una actividad por cuánto tiempo deja la llave del agua abierta?</label>
                 <select id="q1" name="q1">
+                    <option value="0" id="q1_no">No tengo</option>
                     <option value="6" id="q1_f">1 minuto</option>
                     <option value="12" id="q1_s">2 minutos</option>
                     <option value="18" id="q1_t">3 minutos</option>
@@ -28,10 +29,11 @@
             <div class="question">
                 <label for="q2">2. ¿Cuánto tiempo pasas en la ducha diariamente?</label>
                 <select id="q2" name="q2">
-                    <option value="1125" id="q2_f">15 minutos</option>
-                    <option value="1500" id="q2_s">20 minutos</option>
-                    <option value="2250" id="q2_t">30 minutos</option>
-                    <option value="4500" id="q2_c">1 hora</option>
+                    <option value="0" id="q2_no">No tengo</option>
+                    <option value="150" id="q2_f">15 minutos</option>
+                    <option value="200" id="q2_s">20 minutos</option>
+                    <option value="300" id="q2_t">30 minutos</option>
+                    <option value="600" id="q2_c">1 hora</option>
                 </select>
             </div>
             <div class="question">
@@ -44,6 +46,7 @@
             <div class="question">
                 <label for="q4">4. ¿Cuántas veces te duchas por semana?</label>
                 <select id="q4" name="q4">
+                    <option value="0" id="q4_no">No tengo</option>
                     <option value="1" id="q4_f">1 vez</option>
                     <option value="2" id="q4_s">2 veces</option>
                     <option value="3" id="q4_t">3 veces</option>
@@ -63,6 +66,7 @@
             <div class="question">
                 <label for="q5">5. ¿Cuántas veces utilizas el lavavajillas en la semana?</label>
                 <select id="q5" name="q5">
+                    <option value="0" id="q5_no">No tengo</option>
                     <option value="1" id="q5_f">1 vez</option>
                     <option value="2" id="q5_s">2 veces</option>
                     <option value="3" id="q5_t">3 veces</option>
@@ -90,6 +94,7 @@
             <div class="question">
                 <label for="q7">7. ¿Cuántas veces utilizas la lavadora en la semana?</label>
                 <select id="q7" name="q7">
+                    <option value="0" id="q7_no">No tengo</option>
                     <option value="1" id="q7_f">1 vez</option>
                     <option value="2" id="q7_s">2 veces</option>
                     <option value="3" id="q7_t">3 veces</option>
@@ -107,7 +112,7 @@
                     <option value="15" id="q7_qu">15 veces</option>
                 </select>
             </div>
-            <button type="button" onclick="submitSurvey()">Enviar</button>
+            <button type="button" onclick="submitSurvey()">Ver resultados</button>
         </form>
         <div id="result" class="result"></div>
     </div>

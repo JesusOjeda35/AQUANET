@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style6.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Suma de Sectores</h1>
+        <form id="sectorForm">
+            <div class="form-group">
+                <label for="sector1">Sector 1:</label>
+                <input type="number" id="sector1" name="sector1" required>
+            </div>
+            <div class="form-group">
+                <label for="sector2">Sector 2:</label>
+                <input type="number" id="sector2" name="sector2" required>
+            </div>
+            <div class="form-group">
+                <label for="sector3">Sector 3:</label>
+                <input type="number" id="sector3" name="sector3" required>
+            </div>
+            <div class="form-group">
+                <label for="sector4">Sector 4:</label>
+                <input type="number" id="sector4" name="sector4" required>
+            </div>
+            <button type="button" onclick="sumarSectores()">Sumar Sectores</button>
+        </form>
+        <h2>Valor Final: <span id="resultado"></span></h2>
+    </div>
+ <script src="/js/sector.js"></script>
+</body>
+</html>
