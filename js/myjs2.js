@@ -1,31 +1,84 @@
-  // Función para guardar los datos en el almacenamiento local
-  function guardarDatos(litros) {
-    localStorage.setItem('consumoAgua', litros);
-  }
+function submitSurvey() {
+    const form = document.getElementById("surveyForm");
+    const formData = new FormData(form);
+    const resultDiv = document.getElementById("result");
+    
+    const responses = [];
+    formData.forEach((value, key) => {
+        responses.push(`${key}: ${value}`);
+    });
+    
+    resultDiv.style.display = "block";
+    resultDiv.innerHTML = "Gracias por tu respuesta:<br>" + responses.join("<br>");
+     var q1_fValue = parseInt(document.getElementById("q1_f").value);
+     var q1_sValue = parseInt(document.getElementById("q1_s").value);
+     var q1_tValue = parseInt(document.getElementById("q1_t").value);
+     var q1_cValue = parseInt(document.getElementById("q1_c").value);
+     var q1_qValue = parseInt(document.getElementById("q1_q").value);
+     var q1_sxValue = parseInt(document.getElementById("q1_sx").value);
+     var q1_seValue = parseInt(document.getElementById("q1_se").value);
+     var q1_oValue = parseInt(document.getElementById("q1_o").value);
+     var q1_nValue = parseInt(document.getElementById("q1_n").value);
+     var q1_dValue = parseInt(document.getElementById("q1_d").value);
+     var q1_nValue = parseInt(document.getElementById("q1_n").value);
+     var q1_dValue = parseInt(document.getElementById("q1_d").value);
+     var q2_fValue = parseInt(document.getElementById("q2_f").value);
+     var q2_sValue = parseInt(document.getElementById("q2_s").value);
+     var q2_tValue = parseInt(document.getElementById("q2_t").value);
+     var q2_cValue = parseInt(document.getElementById("q2_c").value);
+     var q3_fValue = parseInt(document.getElementById("q3_f").value);
+     var q3_sValue = parseInt(document.getElementById("q3_s").value);
+     var q4_fValue = parseInt(document.getElementById("q4_f").value);
+     var q4_sValue = parseInt(document.getElementById("q4_s").value);
+     var q4_tValue = parseInt(document.getElementById("q4_t").value);
+     var q4_cValue = parseInt(document.getElementById("q4_c").value);
+     var q4_qValue = parseInt(document.getElementById("q4_q").value);
+     var q4_sxValue = parseInt(document.getElementById("q4_sx").value);
+     var q4_seValue = parseInt(document.getElementById("q4_se").value);
+     var q4_oValue = parseInt(document.getElementById("q4_o").value);
+     var q4_nValue = parseInt(document.getElementById("q4_n").value);
+     var q4_dValue = parseInt(document.getElementById("q4_d").value);
+     var q4_nValue = parseInt(document.getElementById("q4_n").value);
+     var q4_dValue = parseInt(document.getElementById("q4_d").value);
+     var q4_onValue = parseInt(document.getElementById("q4_on").value);
+     var q4_doValue = parseInt(document.getElementById("q4_do").value);
+     var q4_trValue = parseInt(document.getElementById("q4_tr").value);
+     var q4_caValue = parseInt(document.getElementById("q4_ca").value);
+     var q5_fValue = parseInt(document.getElementById("q5_f").value);
+     var q5_sValue = parseInt(document.getElementById("q5_s").value);
+     var q5_tValue = parseInt(document.getElementById("q5_t").value);
+     var q5_cValue = parseInt(document.getElementById("q5_c").value);
+     var q5_qValue = parseInt(document.getElementById("q5_q").value);
+     var q5_sxValue = parseInt(document.getElementById("q5_sx").value);
+     var q5_seValue = parseInt(document.getElementById("q5_se").value);
+     var q5_oValue = parseInt(document.getElementById("q5_o").value);
+     var q5_nValue = parseInt(document.getElementById("q5_n").value);
+     var q5_dValue = parseInt(document.getElementById("q5_d").value);
+     var q5_nValue = parseInt(document.getElementById("q5_n").value);
+     var q5_dValue = parseInt(document.getElementById("q5_d").value);
+     var q5_onValue = parseInt(document.getElementById("q5_on").value);
+     var q5_doValue = parseInt(document.getElementById("q5_do").value);
+     var q5_trValue = parseInt(document.getElementById("q5_tr").value);
+     var q5_caValue = parseInt(document.getElementById("q5_ca").value);
+     var q5_quValue = parseInt(document.getElementById("q5_qu").value);
+     var q6_fValue = parseInt(document.getElementById("q6_f").value);
+     var q6_sValue = parseInt(document.getElementById("q6_s").value);
+     var q7_fValue = parseInt(document.getElementById("q7_f").value);
+     var q7_sValue = parseInt(document.getElementById("q7_s").value);
+     var q7_tValue = parseInt(document.getElementById("q7_t").value);
+     var q7_cValue = parseInt(document.getElementById("q7_c").value);
+     var q7_qValue = parseInt(document.getElementById("q7_q").value);
+     var q7_sxValue = parseInt(document.getElementById("q7_sx").value);
+     var q7_seValue = parseInt(document.getElementById("q7_se").value);
+     var q7_oValue = parseInt(document.getElementById("q7_o").value);
+     var q7_nValue = parseInt(document.getElementById("q7_n").value);
+     var q7_dValue = parseInt(document.getElementById("q7_d").value);
+     var q7_nValue = parseInt(document.getElementById("q7_n").value);
+     var q7_dValue = parseInt(document.getElementById("q7_d").value);
+     var q7_onValue = parseInt(document.getElementById("q7_on").value);
+     var q7_doValue = parseInt(document.getElementById("q7_do").value);
+     var q7_trValue = parseInt(document.getElementById("q7_tr").value);
+     var q7_caValue = parseInt(document.getElementById("q7_ca").value);
+     var q7_quValue = parseInt(document.getElementById("q7_qu").value);
 
-  // Función para cargar los datos desde el almacenamiento local
-  function cargarDatos() {
-    var litrosGuardados = localStorage.getItem('consumoAgua');
-    if (litrosGuardados !== null) {
-      document.getElementById('litrosAgua').value = litrosGuardados;
-    }
-  }
-
-  // Cargar los datos cuando la página se carga
-  window.addEventListener('load', cargarDatos);
-
-  document.getElementById('registroForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que se envíe el formulario
-
-    var litrosAgua = parseInt(document.getElementById('litrosAgua').value);
-    var umbral = 0.8; // Umbral del 80%
-
-    guardarDatos(litrosAgua); // Guardar los datos
-
-    if (litrosAgua >= umbral * 100) {
-      alert("¡Estás malgastando agua!");
-      document.getElementById('mensaje').innerText = "¡Estás malgastando agua!";
-    } else {
-      document.getElementById('mensaje').innerText = "";
-    }
-  });
+}
