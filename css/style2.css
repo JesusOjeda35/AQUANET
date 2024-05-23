@@ -11,7 +11,24 @@ body {
     justify-content: center;
     min-height: 100vh;
     background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 23%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 23%, rgba(0,212,255,1) 100%);
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+}
+
+.text-3xl {
+    font-size: 2rem;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.p-10 {
+    padding: 1rem 0;
 }
 
 .card-container {
@@ -25,6 +42,7 @@ body {
     flex: 0 0 auto;
     width: 300px;
     background-color: #fff;
+    color: #000;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -37,7 +55,7 @@ body {
 
 .card img {
     width: 100%;
-    height: auto;
+    height: 350px;
 }
 
 .card .content {
@@ -70,9 +88,13 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 20px;
-    margin-left: 455px;
-    text-decoration: none;
 }
+
 .button:hover {
     background-color: #0e77e8;
+}
+
+.button a {
+    color: #fff;
+    text-decoration: none;
 }
